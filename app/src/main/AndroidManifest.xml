@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WidgetCounter"
+        tools:targetApi="31">
+
+        <!-- Widget Provider -->
+        <receiver
+            android:name=".CounterWidgetReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.flaccidfacade.widgetcounter.INCREMENT" />
+                <action android:name="com.flaccidfacade.widgetcounter.DECREMENT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/counter_widget_info" />
+        </receiver>
+
+        <!-- Widget Configuration Activity -->
+        <activity
+            android:name=".CounterWidgetConfigActivity"
+            android:exported="true"
+            android:theme="@style/Theme.WidgetCounter">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
