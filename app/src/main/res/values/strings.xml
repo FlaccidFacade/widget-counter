@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Widget Counter</string>
+    <string name="widget_name">Counter Widget</string>
+    <string name="widget_description">A simple counter widget with customizable title</string>
+    <string name="default_title">Counter</string>
+    <string name="increment">+</string>
+    <string name="decrement">-</string>
+    <string name="configure_title">Configure Widget</string>
+    <string name="title_hint">Enter widget title</string>
+    <string name="save">Save</string>
+</resources>
